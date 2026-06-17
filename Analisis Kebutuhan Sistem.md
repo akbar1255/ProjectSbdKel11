@@ -6,10 +6,7 @@ Project Based Learning (PjBL) — Progres 1
 
 Kelompok:
 
-NamaNIM
-Muhammad Ridho Faizal2301020124
-Ragil Novant2301020098
-Akbar Rahmat Arifin2301020055
+NamaNIMMuhammad Ridho Faizal2301020124Ragil Novant2301020098Akbar Rahmat Arifin2301020055
 
 
 1. Deskripsi Studi Kasus
@@ -21,10 +18,14 @@ Karena data tidak tersimpan dalam satu basis data yang terstruktur, muncul berba
 2. Latar Belakang dan Tujuan Sistem
 
 2.1 Latar Belakang
+
 Pengelolaan data penelitian dan pengabdian dosen yang belum terstruktur menyebabkan data sulit diintegrasikan antarproses, misalnya antara data proposal dengan data reviewer, atau antara data kontrak dengan data pencairan dana. Tanpa perancangan basis data yang tepat (entitas, atribut, relasi, dan normalisasi yang jelas), risiko terjadinya redundansi data dan anomali (insert, update, delete) akan tinggi.
 
 2.2 Tujuan
+
 Perancangan basis data ini bertujuan untuk:
+
+
 Mengidentifikasi entitas-entitas utama yang terlibat dalam proses penelitian dan pengabdian dosen.
 Menentukan atribut dan relasi antarentitas secara tepat agar data konsisten dan tidak redundan.
 Menyediakan struktur data yang mendukung kebutuhan pencarian, pelaporan, dan rekapitulasi data penelitian/pengabdian.
@@ -32,6 +33,7 @@ Menjadi dasar dalam pembuatan ERD dan skema basis data relasional pada tahap ber
 
 
 3. Identifikasi Aktor
+
 Aktor diidentifikasi berdasarkan siapa saja yang menjadi sumber atau pengguna data dalam sistem.
 
 AktorPeran terhadap DataDosen (Pengusul)Sumber data proposal, anggota tim, laporan kemajuan/akhir, dan luaran (output) penelitian/pengabdian.ReviewerSumber data hasil penilaian/review terhadap proposal.Admin LPPMMengelola data master (skema, periode), memverifikasi dan mengubah status data proposal, mengelola data kontrak dan pencairan dana.Pimpinan/Ketua LPPMPengguna data rekapitulasi (hanya membaca/mengambil data agregat untuk laporan).
@@ -39,6 +41,7 @@ AktorPeran terhadap DataDosen (Pengusul)Sumber data proposal, anggota tim, lapor
 4. Kebutuhan Fungsional
 
 Kebutuhan fungsional berikut difokuskan pada operasi data (CRUD dan pengambilan data) yang harus didukung oleh basis data:
+
 
 1.Sistem harus dapat menyimpan dan mengelola data pengguna beserta perannya (dosen, reviewer, admin, pimpinan).
 2.Sistem harus dapat menyimpan data skema/periode penelitian dan pengabdian (nama skema, tahun, kuota dana, tanggal buka-tutup).
@@ -58,6 +61,7 @@ Kebutuhan fungsional berikut difokuskan pada operasi data (CRUD dan pengambilan 
 
 Berikut calon entitas data yang menjadi dasar perancangan ERD pada Progres 2:
 
+
 Dosen: NIDN, nama, program studi/fakultas, email, no. HP.
 Reviewer: id reviewer, nama, bidang keahlian, email.
 Skema: id skema, nama skema, jenis (penelitian/pengabdian), tahun anggaran, kuota dana, tanggal buka, tanggal tutup.
@@ -67,13 +71,10 @@ RAB: id RAB, id proposal (FK), uraian biaya, jumlah biaya.
 Review: id review, id proposal (FK), id reviewer (FK), skor, catatan, rekomendasi, tanggal review.
 Riwayat_Status: id riwayat, id proposal (FK), status, tanggal perubahan, keterangan.
 Kontrak: id kontrak, id proposal (FK), nomor kontrak, nominal dana, tanggal tanda tangan.
-Termin_Pencairan: id termin, id kontrak (FK), nomor termin, jumlah dana, tanggal pencairan, status (cair/belum).
-Laporan: id laporan, id proposal (FK), jenis laporan (kemajuan/akhir), file laporan, tanggal unggah.
-Luaran: id luaran, id proposal (FK), jenis luaran, judul/keterangan, bukti dokumen/link.
 
 7. Pembagian Tugas Anggota
 
-NamaNIMPeranTugas Utama
-Muhammad Ridho Faizal2301020124Analis Kebutuhan & KoordinatorMenyusun deskripsi studi kasus, latar belakang, identifikasi aktor, dan kebutuhan fungsional dari sisi data; mengoordinasikan progres tim; menyusun dokumentasi laporan akhir.
-Ragil Novant2301020098Perancang ERD & NormalisasiMengidentifikasi entitas dan atribut secara rinci, merancang ERD (kardinalitas dan relasi antartabel), serta melakukan proses normalisasi (1NF, 2NF, 3NF) untuk menghindari redundansi data.
-Akbar Rahmat Arifin2301020055Implementasi Skema & QueryMenerjemahkan ERD ke dalam skema tabel fisik (DDL: CREATE TABLE, primary key, foreign key), membuat data dummy, serta menyusun contoh query (SELECT, JOIN, agregasi) untuk kebutuhan pelaporan.
+NamaNIMPeranTugas UtamaMuhammad Ridho Faizal2301020124Analis Kebutuhan & KoordinatorMenyusun deskripsi studi kasus, latar belakang, identifikasi aktor, dan kebutuhan fungsional dari sisi data; mengoordinasikan progres tim; menyusun dokumentasi laporan akhir.Ragil Novant2301020098Perancang ERD & NormalisasiMengidentifikasi entitas dan atribut secara rinci, merancang ERD (kardinalitas dan relasi antartabel), serta melakukan proses normalisasi (1NF, 2NF, 3NF) untuk menghindari redundansi data.Akbar Rahmat Arifin2301020055Implementasi Skema & QueryMenerjemahkan ERD ke dalam skema tabel fisik (DDL: CREATE TABLE, primary key, foreign key), membuat data dummy, serta menyusun contoh query (SELECT, JOIN, agregasi) untuk kebutuhan pelaporan.
+Termin_Pencairan: id termin, id kontrak (FK), nomor termin, jumlah dana, tanggal pencairan, status (cair/belum).
+Laporan: id laporan, id proposal (FK), jenis laporan (kemajuan/akhir), file laporan, tanggal unggah.
+Luaran: id luaran, id proposal (FK), jenis luaran, judul/keterangan, bukti dokumen/link.
