@@ -6,7 +6,10 @@ Project Based Learning (PjBL) — Progres 1
 
 Kelompok:
 
-NamaNIMMuhammad Ridho Faizal2301020124Ragil Novant2301020098Akbar Rahmat Arifin2301020055
+NamaNIM
+Muhammad Ridho Faizal2301020124
+Ragil Novant2301020098
+Akbar Rahmat Arifin2301020055
 
 
 1. Deskripsi Studi Kasus
@@ -71,10 +74,13 @@ RAB: id RAB, id proposal (FK), uraian biaya, jumlah biaya.
 Review: id review, id proposal (FK), id reviewer (FK), skor, catatan, rekomendasi, tanggal review.
 Riwayat_Status: id riwayat, id proposal (FK), status, tanggal perubahan, keterangan.
 Kontrak: id kontrak, id proposal (FK), nomor kontrak, nominal dana, tanggal tanda tangan.
-
-7. Pembagian Tugas Anggota
-
-NamaNIMPeranTugas UtamaMuhammad Ridho Faizal2301020124Analis Kebutuhan & KoordinatorMenyusun deskripsi studi kasus, latar belakang, identifikasi aktor, dan kebutuhan fungsional dari sisi data; mengoordinasikan progres tim; menyusun dokumentasi laporan akhir.Ragil Novant2301020098Perancang ERD & NormalisasiMengidentifikasi entitas dan atribut secara rinci, merancang ERD (kardinalitas dan relasi antartabel), serta melakukan proses normalisasi (1NF, 2NF, 3NF) untuk menghindari redundansi data.Akbar Rahmat Arifin2301020055Implementasi Skema & QueryMenerjemahkan ERD ke dalam skema tabel fisik (DDL: CREATE TABLE, primary key, foreign key), membuat data dummy, serta menyusun contoh query (SELECT, JOIN, agregasi) untuk kebutuhan pelaporan.
 Termin_Pencairan: id termin, id kontrak (FK), nomor termin, jumlah dana, tanggal pencairan, status (cair/belum).
 Laporan: id laporan, id proposal (FK), jenis laporan (kemajuan/akhir), file laporan, tanggal unggah.
 Luaran: id luaran, id proposal (FK), jenis luaran, judul/keterangan, bukti dokumen/link.
+
+7. Pembagian Tugas Anggota
+
+NamaNIMPeranTugas Utama
+Muhammad Ridho Faizal2301020124Analis Kebutuhan & KoordinatorMenyusun deskripsi studi kasus, latar belakang, identifikasi aktor, dan kebutuhan fungsional dari sisi data; mengoordinasikan progres tim; menyusun dokumentasi laporan akhir.
+Ragil Novant2301020098Perancang ERD & NormalisasiMengidentifikasi entitas dan atribut secara rinci, merancang ERD (kardinalitas dan relasi antartabel), serta melakukan proses normalisasi (1NF, 2NF, 3NF) untuk menghindari redundansi data.
+Akbar Rahmat Arifin2301020055Implementasi Skema & QueryMenerjemahkan ERD ke dalam skema tabel fisik (DDL: CREATE TABLE, primary key, foreign key), membuat data dummy, serta menyusun contoh query (SELECT, JOIN, agregasi) untuk kebutuhan pelaporan.
