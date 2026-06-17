@@ -2,7 +2,7 @@ Analisis Kebutuhan Sistem
 
 Studi Kasus: Sistem Pengelolaan Penelitian dan Pengabdian Dosen
 Mata Kuliah: Sistem Basis Data
-Project Based Learning (PjBL) — Progres 1
+Project Based Learning (PjBL) Progres 1
 
 Kelompok:
 
